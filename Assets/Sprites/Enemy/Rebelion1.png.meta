@@ -1,0 +1,185 @@
+fileFormatVersion: 2
+guid: 0428e506e3768664dac91f0660a344c4
+timeCreated: 1483903684
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Rebelion1_0
+    21300002: Rebelion1_1
+    21300004: Rebelion1_2
+    21300006: Rebelion1_3
+    21300008: Rebelion1_4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Rebelion1_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 536
+        width: 208
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 81, y: 94}
+        - {x: 22, y: 116}
+        - {x: -35, y: 116}
+        - {x: -75, y: 83}
+        - {x: -104, y: 52}
+        - {x: -104, y: -107}
+        - {x: -103, y: -114}
+        - {x: -62, y: -114}
+        - {x: -52, y: -93}
+        - {x: -11, y: -116}
+        - {x: 65, y: -116}
+        - {x: 97, y: -112}
+        - {x: 104, y: -100}
+        - {x: 104, y: 53}
+    - name: Rebelion1_1
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 536
+        width: 208
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23, y: 116}
+        - {x: -25, y: 116}
+        - {x: -102, y: 60}
+        - {x: -104, y: 57}
+        - {x: -104, y: -105}
+        - {x: -103, y: -114}
+        - {x: -62, y: -114}
+        - {x: -52, y: -93}
+        - {x: -11, y: -116}
+        - {x: 104, y: -116}
+        - {x: 104, y: 56}
+        - {x: 75, y: 83}
+    - name: Rebelion1_2
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 280
+        width: 208
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 88, y: 74}
+        - {x: 42, y: 116}
+        - {x: -46, y: 116}
+        - {x: -89, y: 101}
+        - {x: -104, y: 66}
+        - {x: -104, y: -107}
+        - {x: -103, y: -114}
+        - {x: -62, y: -114}
+        - {x: -52, y: -93}
+        - {x: -11, y: -116}
+        - {x: 65, y: -116}
+        - {x: 97, y: -112}
+        - {x: 104, y: -100}
+        - {x: 104, y: 45}
+    - name: Rebelion1_3
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 280
+        width: 208
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 88, y: 78}
+        - {x: 30, y: 112}
+        - {x: -20, y: 112}
+        - {x: -79, y: 93}
+        - {x: -104, y: 59}
+        - {x: -104, y: -103}
+        - {x: -103, y: -110}
+        - {x: -62, y: -110}
+        - {x: -52, y: -89}
+        - {x: -11, y: -112}
+        - {x: 65, y: -112}
+        - {x: 97, y: -108}
+        - {x: 104, y: -96}
+        - {x: 104, y: 49}
+    - name: Rebelion1_4
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 24
+        width: 208
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 81, y: 94}
+        - {x: 22, y: 116}
+        - {x: -35, y: 116}
+        - {x: -75, y: 83}
+        - {x: -104, y: 52}
+        - {x: -104, y: -107}
+        - {x: -103, y: -114}
+        - {x: -62, y: -114}
+        - {x: -52, y: -93}
+        - {x: -11, y: -116}
+        - {x: 65, y: -116}
+        - {x: 97, y: -112}
+        - {x: 104, y: -100}
+        - {x: 104, y: 53}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
