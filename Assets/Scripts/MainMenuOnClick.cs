@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuOnClick : MonoBehaviour {
 	
@@ -22,23 +23,33 @@ public class MainMenuOnClick : MonoBehaviour {
 	}
 
 	void EnterCampaign() {
-		Application.LoadLevel ("LevelSelection");
-	}
+        SceneManager.LoadScene("LevelSelection");
+        playMenuClick();
 
-	void EnterArcade() {
+    }
+
+    void EnterArcade() {
 		Application.OpenURL ("lmgtfy.com/?q=só+queria+dizer+que+esse+botão+vai+demorar+pra+funcionar");
+        playMenuClick();
+    }
+
+    void EnterUpgrades() {
+        playMenuClick();
+    }
+
+    void EnterSettings() {
+        playMenuClick();
+    }
+
+
+
+    void QuitGame() {
+        playMenuClick();
+        Application.Quit();
 	}
 
-	void EnterUpgrades() {
-
-	}
-
-	void EnterSettings() {
-
-	}
-
-	void QuitGame() {
-		Application.Quit();
-	}
-
+    void playMenuClick()
+    {
+        gameObject.GetComponent<AudioSource>().Play();
+    }
 }

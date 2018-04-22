@@ -47,7 +47,8 @@ public class EnemyMove : MonoBehaviour {
 			other.SendMessage ("applyDamage", 10);
 			GameObject explo = (GameObject)Instantiate (explosion);
 			explo.transform.position = this.transform.position;
-			Destroy (this.gameObject);
+            scoreP.SendMessage("updateScore", 10);
+            Destroy(this.gameObject);
 		} 
 
 	}

@@ -9,6 +9,7 @@ public class Move_Main : MonoBehaviour {
 	Vector3 pos;
 	Vector3 analog;
 	int hp;
+    int maxPlayerHp;
 	PlayerHealthBar hpBar;
 	CooldownBar cdBar;
 	Component[] lasers;
@@ -19,23 +20,36 @@ public class Move_Main : MonoBehaviour {
 	bool cooldownBar = false;
 	SaveState saveState;
 	Ship shi;
-
-	// Use this for initialization
-	void Start () {
+    private AudioSource[] allAudioSources;
+    // Use this for initialization
+    void Start () {
 		//saveState = GameObject.FindGameObjectWithTag ("SaveState").GetComponent (typeof(SaveState)) as SaveState;
 
 		//hp = saveState.getSelectedShip ().hp;
-		hp = 30;
-
+		hp = 50;
+        maxPlayerHp = hp;
 		hpBar = gameObject.GetComponent (typeof(PlayerHealthBar)) as PlayerHealthBar;
 		cdBar = gameObject.GetComponent (typeof(CooldownBar)) as CooldownBar;
 		lasers = GetComponentsInChildren( typeof(Laser_shoter) );
 		barCooldownRef = GetComponentInChildren( typeof(CooldownBar) ) as CooldownBar;
 		timeLeft = shotCooldownCount;
-	}
 
-	// Update is called once per frame
-	void Update () {
+        StopAllAudio();
+
+    }
+
+
+    void StopAllAudio()
+    {
+        allAudioSources = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
+        foreach (AudioSource audioS in allAudioSources)
+        {
+            audioS.Stop();
+        }
+    }
+
+    // Update is called once per frame
+    void FixedUpdate () {
 		
 
 		Vector3 pos = Camera.main.WorldToViewportPoint (transform.position); // stay inside of the camera view
@@ -78,12 +92,11 @@ public class Move_Main : MonoBehaviour {
 					laser.SendMessage ("shotNow");
 					barCooldownRef.SendMessage ("countdownCDB");
 				}
-				shotCooldown = true;
-				timeLeft = shotCooldownCount;
-			}
-		}
-
-
+                shotCooldown = true;
+                timeLeft = shotCooldownCount;
+                gameObject.GetComponent<AudioSource>().Play();
+            }
+        }
 
 		timeLeft -= Time.deltaTime;
 
@@ -94,13 +107,14 @@ public class Move_Main : MonoBehaviour {
 
 
 
-		if (hp < 1) {
-			GameObject explo = (GameObject)Instantiate (explosion);
-			explo.transform.position = this.transform.position;
-			Application.LoadLevel ("DeadScreen");
-			Destroy (this.gameObject);
-		}
-	}
+        if (hp < 1)
+        {
+            GameObject explo = (GameObject)Instantiate(explosion);
+            explo.transform.position = this.transform.position;
+            Destroy(this.gameObject);
+            Application.LoadLevel("DeadScreen");
+        }
+    }
 
 
 	public void setCooldownBarTrue() {
@@ -114,7 +128,10 @@ public class Move_Main : MonoBehaviour {
 
 
 	void applyDamage(int dmg) {
-		hp -= dmg;
-		hpBar.SendMessage ("healthBarUpdate", hp);
+        int[] tempStorage = new int[2];
+        hp -= dmg;
+        tempStorage[0] = hp;
+        tempStorage[1] = maxPlayerHp;
+        hpBar.SendMessage ("healthBarUpdate", tempStorage);
 	}
 }

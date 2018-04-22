@@ -1,15 +1,8 @@
-﻿<Properties StartupItem="Assembly-CSharp.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LevelSelectionOnClick.cs">
+﻿<Properties StartupItem="SpaceEmpire.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Move_Main.cs">
     <Files>
-      <File FileName="Assets\Scripts\Move_Main.cs" Line="29" Column="3" />
-      <File FileName="Assets\Scripts\GlobalVariables.cs" Line="15" Column="17" />
-      <File FileName="Assets\Scripts\LoadScene.cs" Line="19" Column="4" />
-      <File FileName="Assets\Scripts\MainMenuClassManager.cs" Line="19" Column="3" />
-      <File FileName="Assets\Scripts\SpawnEnemy.cs" Line="22" Column="4" />
-      <File FileName="Assets\Scripts\SaveState.cs" Line="27" Column="24" />
-      <File FileName="Assets\LoadMainMenu.cs" Line="14" Column="3" />
-      <File FileName="Assets\Scripts\LevelSelectionOnClick.cs" Line="23" Column="42" />
+      <File FileName="Assets\Scripts\Move_Main.cs" Line="81" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

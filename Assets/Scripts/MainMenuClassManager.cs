@@ -7,8 +7,9 @@ public class MainMenuClassManager : MonoBehaviour {
 	// Use this for initialization
 	public GameObject glo;
 	public GameObject sv;
+    private AudioSource[] allAudioSources;
 
-	void Start () {
+    void Start () {
 		GameObject globalV = (GameObject)Instantiate (glo);
 		GameObject saveState = (GameObject)Instantiate (sv);
 
@@ -16,10 +17,17 @@ public class MainMenuClassManager : MonoBehaviour {
 		DontDestroyOnLoad (saveState);
 
 		DontDestroyOnLoad  (this.gameObject);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        StopAllAudio();
+        gameObject.GetComponent<AudioSource>().Play();
+    }
+
+    void StopAllAudio()
+    {
+        allAudioSources = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
+        foreach (AudioSource audioS in allAudioSources)
+        {
+            audioS.Stop();
+        }
+    }
+
 }

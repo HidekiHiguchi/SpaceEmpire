@@ -12,7 +12,7 @@ public class CooldownBar : MonoBehaviour {
 	void Start() {
 
 		mm = GetComponent (typeof(Move_Main)) as Move_Main;
-		cooldown.maxValue = 30;
+		cooldown.maxValue = 50;
 		cooldown.minValue = 0;
 		timeToRegen = 1.5f;
 		timeLeft = timeToRegen;

@@ -15,8 +15,8 @@ public class PlayerHealthBar : MonoBehaviour {
 	}
 		
 
-	void healthBarUpdate(int playerHP) {
-		hp.value = playerHP;
+	void healthBarUpdate(int[] update) {
+        hp.value = (update[0] * 100) / update[1];
 	}
 		
 }

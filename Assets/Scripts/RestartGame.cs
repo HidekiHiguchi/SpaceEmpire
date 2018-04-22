@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using CnControls;
+using UnityEngine.SceneManagement;
 
 public class RestartGame : MonoBehaviour {
 	
@@ -18,21 +19,29 @@ public class RestartGame : MonoBehaviour {
 	}
 
 	void RetryGame() {
-		Application.LoadLevel ("Phase1");
+        playMenuClick();
+
+        SceneManager.LoadScene("Phase1");
 	}
 
 	void SelectLevel() {
+        playMenuClick();
 
-	}
+    }
 
 	void EnterUpgrades() {
+        playMenuClick();
 
-	}
+    }
 
 	void BackToTitle() {
-		Application.LoadLevel ("MainMenu");
+        playMenuClick();
+        SceneManager.LoadScene("Intro");
 	}
-
+    void playMenuClick()
+    {
+        gameObject.GetComponent<AudioSource>().Play();
+    }
 
 
 }
